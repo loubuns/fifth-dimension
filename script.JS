@@ -23,27 +23,3 @@ gif.addEventListener("load", function() {
     }, 500); // This delay should match the duration of the transition in CSS
   }, duration * 1000);
 });
-
-const navSlide = () => {
-	const burger = document.querySelector('.burger');
-	const nav = document.querySelector('.nav-links');
-	const navLinks = document.querySelectorAll('.nav-links li');
-
-	// Toggle Nav
-	burger.addEventListener('click', () => {
-		nav.classList.toggle('nav-active');
-
-		// Burger Animation
-		burger.classList.toggle('toggle');
-	});
-
-	// Close Nav on Nav Link Click
-	navLinks.forEach(link => {
-		link.addEventListener('click', () => {
-			nav.classList.remove('nav-active');
-			burger.classList.remove('toggle');
-		});
-	});
-}
-
-navSlide
