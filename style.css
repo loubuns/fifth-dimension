@@ -13,3 +13,45 @@
     max-height: 100%;
     max-width: 100%;
   }
+.bgcl {
+  background-image: linear-gradient(90deg, #CFF2FF, #73D1F5, #73A8F5, #1865D6, #0F3D80, #031264);
+  background-size: 800% 800%;
+  animation: gradient-bg 14s ease infinite;
+  -moz-animation: gradient-bg 14s ease infinite;
+  -webkit-animation: gradient-bg 14s ease infinite;
+}
+
+@keyframes gradient-bg {
+	0% {
+		background-position: 50% 0%;
+	}
+	50% {
+		background-position: 50% 100%;
+	}
+	100% {
+		background-position: 50% 0%;
+	}
+}
+
+@-webkit-keyframes gradient-bg {
+  0% {
+    background-position:50% 0%;
+  }
+  50% {
+    background-position:50% 100%;
+  }
+  100% {
+    background-position:50% 0%;
+  }
+}
+@-moz-keyframes gradient-bg {
+  0% {
+    background-position:50% 0%;
+  }
+  50% {
+    background-position:50% 100%;
+  }
+  100% {
+    background-position:50% 0%;
+  }
+}
