@@ -13,45 +13,192 @@
     max-height: 100%;
     max-width: 100%;
   }
-.bgcl {
-  background-image: linear-gradient(90deg, #CFF2FF, #73D1F5, #73A8F5, #1865D6, #0F3D80, #031264);
-  background-size: 800% 800%;
-  animation: gradient-bg 14s ease infinite;
-  -moz-animation: gradient-bg 14s ease infinite;
-  -webkit-animation: gradient-bg 14s ease infinite;
+  * {
+    margin: 0;
+    padding: 0;
 }
 
-@keyframes gradient-bg {
-	0% {
-		background-position: 50% 0%;
-	}
-	50% {
-		background-position: 50% 100%;
-	}
-	100% {
-		background-position: 50% 0%;
-	}
+
+body {
+    background: #000;
+    height: 100vh;
+    overflow: hidden;
 }
 
-@-webkit-keyframes gradient-bg {
-  0% {
-    background-position:50% 0%;
-  }
-  50% {
-    background-position:50% 100%;
-  }
-  100% {
-    background-position:50% 0%;
-  }
+$shootingStarContainerCount: 3;
+$starCount: 10;
+
+.shootingStarContainer {
+    @for $j from 1 through $shootingStarContainerCount {
+        &:nth-child(#{$j}) {
+            position: absolute;
+            width: 100%;
+            height: 130%;
+            transform: rotate(random(10)+35deg);
+            z-index: 10;
+            //    background-color: #30000080;
+        }
+    }
 }
-@-moz-keyframes gradient-bg {
-  0% {
-    background-position:50% 0%;
-  }
-  50% {
-    background-position:50% 100%;
-  }
-  100% {
-    background-position:50% 0%;
-  }
+
+.shootingStar {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(-70deg, rgba(255, 235, 235, 1), rgba(0, 0, 0, 1));
+
+    @for $j from 1 through $shootingStarContainerCount {
+        @for $i from 1 through $starCount {
+            .shootingStarContainer:nth-child(#{$j}) &:nth-child(#{$i}) {
+                $delay: random(60000) + 200ms;
+                $duration: random(2000) + 750ms;
+                left: calc(#{random(50) + 0%});
+                top: calc(#{random(98) + 1%});
+                animation: shootingFrames $duration ease-in-out $delay;
+                opacity: random(75) / 100 + 0.15;
+
+            }
+        }
+    }
+}
+
+@keyframes shootingFrames {
+    0% {
+        transform: translateX(0);
+        width: 0;
+    }
+
+    30% {
+        width: 200px;
+    }
+
+    100% {
+        width: 0;
+        transform: translateX(random(100) + 800px);
+    }
+}
+
+
+
+
+
+
+
+.stars,
+.twinkleMask,
+.twinkleMask2,
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: #000 url('https://wolf.drjm.co.uk/nightsky/stars.jpg') repeat top center;
+    z-index: 0;
+}
+
+.twinkleMask {
+    background: transparent url('https://wolf.drjm.co.uk/nightsky/twinklemask.png') repeat top center;
+    z-index: 1;
+    animation: twinkleFrames 700s linear infinite;
+}
+
+.twinkleMask2 {
+    background: transparent url('https://wolf.drjm.co.uk/nightsky/twinkleMask2.png') repeat top center;
+    z-index: 2;
+    height: 200%;
+    animation: twinkleFrames2 300s linear infinite;
+}
+
+.clouds {
+    background: transparent url('https://wolf.drjm.co.uk/nightsky/clouds.png') repeat top center;
+    z-index: 3;
+    height: 150%;
+    animation: cloudsFrames 300s linear infinite;
+}
+
+.fogContainer {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 7;
+}
+
+.fog {
+    position: absolute;
+    left: -50%;
+    top: -30%;
+    width: 200%;
+    height: 200%;
+    animation-name: fogFrames;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background: linear-gradient(-5deg, #{"#00000000 0%, #ffffff15 40%, #74590121 45%, #8b845b21 55%, #00000000 70%"});
+}
+
+
+
+@keyframes fogFrames {
+    0% {
+        transform: none;
+    }
+
+    10% {
+        transform: scaleY(.75) translate(5%, -2%) rotate(15deg);
+    }
+
+    25% {
+        transform: scaleY(1) translate(10%, 7%);
+    }
+
+    50% {
+        transform: scaleY(0.5) rotate(-15deg);
+    }
+
+    75% {
+        transform: scaleY(0.2) translate(7%, -2%);
+    }
+
+    100% {
+        transform: none;
+    }
+
+}
+
+@keyframes twinkleFrames {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@keyframes twinkleFrames2 {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 5000px;
+    }
+}
+
+@keyframes cloudsFrames {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
 }
