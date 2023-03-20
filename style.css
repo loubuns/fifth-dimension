@@ -202,3 +202,8 @@ $starCount: 10;
         background-position: 10000px 0;
     }
 }
+
+.textbox {
+    background-color: aliceblue;
+    padding: 10px;
+}
