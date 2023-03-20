@@ -43,32 +43,6 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#nav {
-    position: absolute;
-    left: 0px;
-    height: 40px;
-    background-color: #2C64B4;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-#nav ul {
-    margin: 0;
-    padding: 0;
-}
-#nav ul li {
-    margin: 0;
-    padding: 0;
-    float:left;
-}
-#nav ul li a {
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-    color: #FFF;
-    text-align: center;
-}
-
 .navbar {
     display: inline;
     overflow: hidden;
