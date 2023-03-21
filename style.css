@@ -146,8 +146,3 @@ body {
   }
 }
 
-body{overflow:hidden;}
-svg {
-  width: 100vw;
-  height: 100vh;
-}
