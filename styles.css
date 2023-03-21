@@ -1,0 +1,77 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Main CSS */
+body {
+  font-family: Segoe UI, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav li {
+  margin-right: 1rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.blog-posts {
+  padding: 2rem 0;
+}
+.blog-post {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+}
+.blog-post:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.blog-post h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.blog-post p {
+  margin-bottom: 1.5rem;
+}
+.blog-post a {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.blog-post a:hover {
+  background-color: #666;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+footer p {
+  text-align: center;
+}

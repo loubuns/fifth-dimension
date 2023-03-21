@@ -198,6 +198,6 @@ h4 {
   animation: textShine 5s ease-in-out infinite alternate;
 }
 
-img {
+.imgbord {
   border: 5px solid #555;
 }
