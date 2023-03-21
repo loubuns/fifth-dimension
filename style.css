@@ -177,7 +177,9 @@ body {
 }
 
 h4 {
-
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 .online {
@@ -194,4 +196,8 @@ h4 {
   text-emphasis-color: transparent;
   background-size: 500% auto;
   animation: textShine 5s ease-in-out infinite alternate;
+}
+
+img {
+  border: 5px solid #555;
 }
