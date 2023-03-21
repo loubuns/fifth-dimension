@@ -159,6 +159,7 @@ body {
   float: left;
   width: 33.33%;
   padding: 15px;
+  overflow: hidden;
 }
 
 /* Clear floats after the columns */
@@ -173,4 +174,24 @@ body {
   .column {
     width: 100%;
   }
+}
+
+h4 {
+
+}
+
+.online {
+  background: linear-gradient(
+      to right,
+      #0b8c16 20%,
+      #17a80a 30%,
+      #13882c 70%,
+      #267211 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-emphasis-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
 }
