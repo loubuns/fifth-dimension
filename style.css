@@ -1,3 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Lilita+One&display=swap');
+
+
+
+
 #gif-container {
     position: fixed;
     top: 0;
@@ -200,4 +207,39 @@ h4 {
 
 .imgbord {
   border: 5px solid #555;
+}
+
+.hmpg {
+      background-image: url(The-5th-Dimension_2560x1440.png);
+      height: 100vh;
+      display: block;
+      background-size: 100% 100%;
+      text-align: center;
+      padding: 130px 0;
+}
+
+h5 {
+  font-size: 75px;
+  font-family: 'Lilita One', cursive;
+  color: white;
+}
+
+.fifthdim {
+  background: linear-gradient(
+      to right,
+      #ffffff 20%,
+      #8dd0ed 30%,
+      #ffffff 70%,
+      #c8a0e7 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-emphasis-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+.hmpgqu {
+  font-size: 30px;
 }
