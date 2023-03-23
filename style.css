@@ -214,7 +214,7 @@ h4 {
       background-image: url(The-5th-Dimension_2560x1440.png);
       height: 100vh;
       display: block;
-      background-size: 100% 100%;
+      background-size: cover;
       text-align: center;
       padding: 130px 0;
 }
