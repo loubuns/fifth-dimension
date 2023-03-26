@@ -17,4 +17,3 @@ gif.addEventListener("load", function() {
     }, 500);
   }, duration * 1000);
 });
-
