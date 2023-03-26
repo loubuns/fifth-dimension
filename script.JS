@@ -18,19 +18,3 @@ gif.addEventListener("load", function() {
   }, duration * 1000);
 });
 
-const passwordForm = document.getElementById('password-form');
-const passwordInput = document.getElementById('password');
-
-passwordForm.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  const password = passwordInput.value;
-
-  if (password === 'password') {
-    // Correct password. Show the website.
-    window.location.href = 'lockedvault.html';
-  } else {
-    // Incorrect password. Show an error message.
-    alert('Incorrect password. Please try again.');
-  }
-});
