@@ -1,4 +1,9 @@
 # fifth-dimension
+
+this repository has been archived as it no longer works + has not been used in a long time
+
+
+[archived on Dec/03/2023]
 the fifth dimension - a place no one has ever stepped foot in. do you dare be the first?
 THIS PROJECT HAS BEEN FINISHED ON 1/04/23
 I'M SO THANKFUL
